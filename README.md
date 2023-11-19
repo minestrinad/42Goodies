@@ -2,7 +2,7 @@ The 42Goodies repository is a curated collection of essential scripts tailored f
 
 Key Scripts:
 - [git-acp.sh](#git-acp-script)
-- [clean-repo.sh](#Clean-Repository-Script)
+- [clean-repo.sh](#clean-repository-script-clean-reposh)
 
 clean-repo.sh:
         An all-in-one script to thoroughly clean your repository. It removes compiled binaries, object files, and other temporary files, ensuring a pristine working directory.
