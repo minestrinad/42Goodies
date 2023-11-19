@@ -7,6 +7,7 @@ The **42Goodies** repository is a curated collection of essential scripts tailor
 Key Scripts:
 - [git-acp.sh](#git-acp-script-git-acpsh)⤴️
 - [clean-repo.sh](#clean-repository-script-clean-reposh)🧽
+- [norm-check.sh](#norminette-checker-script-norm-checksh)✔️
 
 # Git ACP Script *git-acp.sh*
 
@@ -115,7 +116,7 @@ This Bash script is designed to provide a comprehensive cleaning solution for re
 
 **Enjoy maintaining a clean repository with the Clean Repository Script!**
 
-# Norminette Checker Script
+# Norminette Checker Script *norm-check.sh*
 
 ## Overview
 
