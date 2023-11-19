@@ -23,34 +23,40 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
+path="$1"
+
+if [[ ! "$path" == /* ]]; then
+    path="/$path"
+fi
+
 # Navigate to the specified directory
-cd "$HOME$1" || exit
+cd "$HOME$path" || exit
 
 # Check if the directory exists
-if [ ! -d "$HOME$1" ]; then
+if [ ! -d "$HOME$path" ]; then
     echo -e "\e[31mError: Directory not found.\e[0m"
     exit 1
 fi
 
 # Check if the directory is empty
-if [ -z "$(ls -A $HOME$1)" ]; then
+if [ -z "$(ls -A $HOME$path)" ]; then
     echo -e "\e[31mError: Directory is empty.\e[0m"
     exit 1
 fi
 
 # Call the function to clean all subdirectories with a Makefile
-clean_dir "$HOME$1"
+clean_dir "$HOME$path"
 
 # Clean each executable file find from the specified directory
-find "$HOME$1" -type f -name "*.out" -exec rm -f '{}' +
+find "$HOME$path" -type f -name "*.out" -exec rm -f '{}' +
 
 # Clean each object file find from the specified directory
-find "$HOME$1" -type f -name "*.o" -exec rm -f '{}' +
+find "$HOME$path" -type f -name "*.o" -exec rm -f '{}' +
 
 # Clean each temporary file find from the specified directory
-find "$HOME$1" -type f -name "*~" -exec rm -f '{}' +
+find "$HOME$path" -type f -name "*~" -exec rm -f '{}' +
 
 # Clean each hidden file find from the specified directory
-find "$HOME$1" -type d \( -name ".git" -o -name "." -o -name ".." \) -prune -o -name ".*" -exec rm -rf '{}' +
+find "$HOME$path" -type d \( -name ".git" -o -name "." -o -name ".." \) -prune -o -name ".*" -exec rm -rf '{}' +
 
 echo -e "\e[32mRepository cleaned.\e[0m"

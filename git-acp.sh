@@ -8,24 +8,30 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
+path="$1"
+
+if [[ ! "$path" == /* ]]; then
+    path="/$path"
+fi
+
 # Navigate to the specified directory
-cd "$HOME$1" || exit
+cd "$HOME$path" || exit
 
 # Check if the directory exists
-if [ ! -d "$HOME$1" ]; then
+if [ ! -d "$HOME$path" ]; then
     echo -e "\e[31mError: Directory not found.\e[0m"
     exit 1
 fi
 
 # Check if the directory is empty
-if [ -z "$(ls -A $HOME$1)" ]; then
+if [ -z "$(ls -A $HOME$path)" ]; then
     echo -e "\e[31mError: Directory is empty.\e[0m"
     exit 1
 fi
 
 # Check if the directory contains Git repositories
 # if so push directly from the directory
-if [ -d "$HOME$1/.git" ]; then
+if [ -d "$HOME$path/.git" ]; then
     # Prompt the user for a commit message
     read -p "Enter a commit message for $directory (press Enter to use timestamp): " commit_message
 
