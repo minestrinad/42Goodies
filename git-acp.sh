@@ -1,8 +1,6 @@
 #!/bin/bash
 
-#write in red: echo -e "\e[31mHello World\e[0m"
-#write in green: echo -e "\e[32mHello World\e[0m"
-# set -e
+set -e
 
 # Check if the path argument is provided
 if [ -z "$1" ]; then
@@ -26,7 +24,7 @@ if [ -z "$(ls -A $HOME$1)" ]; then
 fi
 
 # Check if the directory contains Git repositories
-#if so push directly from the directory
+# if so push directly from the directory
 if [ -d "$HOME$1/.git" ]; then
     # Prompt the user for a commit message
     read -p "Enter a commit message for $directory (press Enter to use timestamp): " commit_message
