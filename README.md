@@ -1,4 +1,5 @@
 The **42Goodies** repository is a curated collection of essential scripts tailored for developers navigating the challenges of the 42 School (École 42) curriculum and beyond. These scripts aim to streamline common tasks, enforce coding standards, and enhance the overall development experience.
+**Warning:** This repository contains self-made scripts that have been used and tested by the creator. It is strongly advised to create a backup of your work before utilizing any script from this repository on your projects. Additionally, it is essential to thoroughly understand the functionality of each script before execution. **Use at your own risk.**
 
 Key Scripts:
 - [git-acp.sh](#git-acp-script-git-acpsh)⤴️
