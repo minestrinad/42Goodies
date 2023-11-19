@@ -1,6 +1,7 @@
 The 42Goodies repository is a curated collection of essential scripts tailored for developers navigating the challenges of the 42 School (École 42) curriculum and beyond. These scripts aim to streamline common tasks, enforce coding standards, and enhance the overall development experience. Whether you're polishing your projects, preparing for evaluations, or simply seeking efficiency in your coding workflow, 42Goodies has got you covered.
 
 Key Scripts:
+1. [git-acp.sh](https://github.com/minestrinad/42Goodies/edit/main/README.md#git-acp-script)
 
 clean-repo.sh:
         An all-in-one script to thoroughly clean your repository. It removes compiled binaries, object files, and other temporary files, ensuring a pristine working directory.
