@@ -115,6 +115,46 @@ This Bash script is designed to provide a comprehensive cleaning solution for re
 
 **Enjoy maintaining a clean repository with the Clean Repository Script!**
 
+# Norminette Checker Script
+
+## Overview
+
+This Bash script, `norm-check.sh`, simplifies the process of running the Norminette recursively on subdirectories with a Makefile within the specified directory. It includes the option to exclude specific directories from the norm check.
+
+## Usage
+
+```bash
+./norm-check.sh <path_to_directory> [-exclude <excluded_directory1> <excluded_directory2> ...]
+```
+
+- `<path_to_directory>`: Path to the directory containing the repositories you want to check.
+- `-exclude`: (Optional) Flag to exclude specific directories from the norm check. Provide a list of directories to be excluded.
+
+## Example Usage
+
+```bash
+./norm-check.sh ~/Desktop/path/to/repos -exclude excluded_dir1 excluded_dir2
+```
+
+## Important
+
+- Ensure the `norminette` command is available in your system.
+- The `-exclude` flag is optional, allowing you to skip specific directories during the norm check.
+
+## Caution :warning:
+
+- Verify the correctness of the specified path and the existence of provided directories.
+- The script uses `norminette -R CheckForbiddenSourceHeader` to check for forbidden source headers.
+
+## Notes
+
+- The script navigates to the specified directory, checks for its existence, and then proceeds with the norm check.
+- If the specified directory is empty, an error message is displayed.
+
+Feel free to use and modify the script according to your needs. Contributions and improvements are welcome!
+
+**Happy norm checking with the Norminette Checker script!**
+
 ## Usage:
 Clone the 42Goodies repository and explore the scripts based on your needs. Each script is designed to be user-friendly with clear instructions in the comments. Run the scripts on your project directory to automate routine tasks and maintain compliance with 42 coding standards.
 
